@@ -4,7 +4,7 @@ const path = require("path");
 const app = express()
 const SERVER_PORT = process.env.PORT || 3000
 
-app.use(express.static("views"))
+app.use(express.static(__dirname + "/views"))
 
 // setup a 'route' to listen on the default url path
 app.get("/", (req, res) => {
